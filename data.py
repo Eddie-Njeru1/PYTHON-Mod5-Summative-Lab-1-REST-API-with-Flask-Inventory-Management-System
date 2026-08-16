@@ -12,7 +12,8 @@ def get_item_by_id(item_id): #Find item by ID
             return item #Item is found
         return None #Item is not found
 
-def add_item(data): #Create a new item into the inventory
+#Create a new item into the inventory
+def add_item(data): 
     global next_id #Assigns the new item and ID
     new_item = { #Items information 
         "id": next_id,
@@ -27,14 +28,16 @@ def add_item(data): #Create a new item into the inventory
     next_id += 1 #Id counter will add the next item
     return new_item
 
-def update_item(item_id, changes):#Update an existing item in the inventory
+#Update an existing item in the inventory
+def update_item(item_id, changes):
     item = get_item_by_id(item_id) #Identify items that needs to be updated
     if item is None: 
         return None
     item.update(changes) #updates the changes 
     return item
 
-def delete_item(item_id): #Delete item from inventory using its ID
+#Delete item from inventory using its ID
+def delete_item(item_id): 
     item = get_item_by_id(item_id) #Identify items that needs to be deleted
     if item is None: #
         return False
