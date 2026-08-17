@@ -3,7 +3,7 @@
 import argparse # Module for parsing command-line arguments and options.
 import requests # Module for sending HTTP requests
 
-BASE_URL = "http://127.0.0.1:5000/inventory" #For inventory API
+BASE_URL = "http://127.0.0.1:5000/inventory/" #For inventory API
 
 # View all items in the inventory
 def view_inventory():
